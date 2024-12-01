@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@100..800&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+.notif-cont{
+    margin: 5rem 0 0;
+    display: flex;
+    justify-content: center;
+}
+.notifi-bg{
+    background-color: #dddddd;
+    height: 90vh;
+    width: 95%;
+    display: flex;
+    justify-content: center;
+}
+.notifi-e{
+    font-family: "IBM Plex Sans","Anek Devanagari";
+    background-color: #ffffff;
+    width: 80%;
+    height: 10rem;
+    margin: 1rem 0 0;
+}
+.not-check{
+    width: 2rem;
+    height: 2rem;
+    padding: 0 .5rem;
+}
+.notifi-head{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    margin: 0 0 .5rem;
+}
+.not-dat{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: space-evenly;
+    margin: 1rem 0 0;
+}
+.not-st{
+    font-weight: 900;
+}
+.not-titl{
+    font-weight: 900;
+}
+.not-txt{
+    padding: 0 2rem;
+}
+.notifi-bod{
+    height: 7rem;
+    display: flex;
+    flex-direction: column;
+}
+.btn-close-c{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
+
+}
+.close-btn{
+    width: 4rem;
+    height: 1.2rem;
+    border: 1px solid #a51919;
+    border-radius: 4px;
+    background-color: #e41818;
+    color: #ffffff;
+    font-weight: 700;
+}
+.not-more{
+    display: flex;
+    font-size: 1rem;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 4rem;
+    background-color: #ffffff;
+    margin: .6rem 0 0;
+    border: none;
+    cursor: pointer;
+    font-family: "IBM Plex Sans","Anek Devanagari";
+}
+.down-opt{
+    width: 1rem;
+    height: 1rem;
+    border-bottom: 1px solid #000000;
+    border-left: 1px solid #000000;
+    transform: rotate(-45deg);
+    margin: .2rem;
+}
+.not-more:hover{
+    background-color: #f1f1f1;
+}

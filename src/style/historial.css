@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@100..800&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+.hist-list{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    margin: 0 0 0 20%;
+}
+.elmnt-hist{
+    background-color: #ffffff;
+    height: 8rem;
+    font-family: "IBM Plex Sans","Anek Devanagari";
+    margin: .5rem 4rem 0;
+    padding: .5rem 0;
+    width: 30rem;
+}
+.date-h{
+    display: flex;
+    align-items: center;
+    margin: .5rem .2rem;
+    font-family: "IBM Plex Sans","Anek Devanagari";
+}
+.dateh-ind{
+    z-index: 2;
+    background-color: #ffffff;
+    color: #000000;
+    padding: .2rem .5rem;
+    border-radius: 5px;
+}
+.panel-h-cont{
+    display: flex;
+    flex-direction: row;
+}
+.panel-optn{
+    margin: 5rem .3rem 0 0;
+    background-color: #0f3fa7;
+    font-family: "IBM Plex Sans","Anek Devanagari";
+    color: #ffffff;
+    width: 15rem;
+    position: absolute;
+    z-index: 3;
+    height: calc(100vh - 7rem);
+    padding: 1rem .5rem;
+}
+.option-h{
+    padding: .5rem 1rem;
+    margin: .2rem 0;
+}
+.option-h:hover{
+    border: 1px solid #092767;
+    background-color: #092767;
+}
+.histor-cont{
+    margin: 5rem 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 90vh;
+    height: calc(100vh - 5rem);
+    background-color: #858585;
+    overflow: auto;
+    scrollbar-width: none;
+}
+.histor-cont::-webkit-scrollbar{
+    display: none;
+}
+.cont-list-h{
+    padding: 6rem 0;
+    height:90% ;
+    display: flex;
+    flex-direction: column;
+}
+.head-hist{
+    width: 30rem;
+    display: flex;
+    justify-content: space-evenly;
+    font-weight: 900;
+    margin: 1rem 0 0;
+}
+.hist-desc{
+    padding: 0 .2rem;
+    width: 15rem;
+    margin: .5rem 0;
+}
+.mediodpago, .direccionpago{
+    font-weight: 400;
+}
+.medio-pago{
+    width: 15rem;
+}
+.hist-pago, .hist-dir{
+    margin: .5rem 0;
+    font-weight: 900;
+}
+.description-c{
+    display: flex;
+    flex-direction: row;
+}
+.title-hist{
+    background-color: #48e019;
+}
+.hist-date{
+    background-color: #e0a119;
+}
+.hist-hour{
+    background-color: #e0d319;
+}
+.hist-price{
+    width: 7rem;
+    text-align: center;
+    margin: 0 2rem;
+    background-color: #f38a29;
+}
+.divih-l{
+    border: 1px solid #ffffff ;
+    width: 35rem;
+}

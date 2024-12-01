@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@100..800&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+.global-c{
+    display: flex;
+}
+.global-c, .product-c, .method-c{
+    height: calc(100vh - 4rem);
+}
+
+.product-c{
+    width: 80%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    background-color: #747474;
+    margin: 4rem 0 0;
+}
+.product-c::-webkit-scrollbar {
+    display: none;
+  }
+.method-c{
+    width: 50vh;
+    position: fixed;
+    right: 0;
+    font-family: "IBM Plex Sans","Anek Devanagari";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 .2rem 0 1rem;
+}
+.list{
+    background-color: #b6b6b6;
+    font-family: "IBM Plex Sans","Anek Devanagari";
+    height: calc(100vh - 3rem);
+    width: 20rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.list-content{
+    background-color: #e2e2e2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 .5rem;
+    margin: 5rem .5rem 0;
+    height: 20rem;
+}
+.valor-t{
+    font-weight: 800;
+    margin:1rem 0 1rem 1rem;
+}
+.process{
+    margin: 2rem 0 0;
+    display: flex;
+    align-items: center;
+}
+.procs-1, .procs-0{
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+.procs-0, .line-div1{
+    background-color: #ffffff;
+}
+.procs-1, .line-div{
+    background-color: #2ebb21;
+}
+.line-div1, .line-div{
+    width: 3rem;
+    height: .5rem;
+}
+.line-div1{
+    border-top: 1px solid #868686;
+    border-bottom: 1px solid #868686;
+}
+.line-div{
+    border-top: 1px solid #239219;
+    border-bottom: 1px solid #239219;
+}
+.item-l{
+    font-weight: 600;
+    font-size: 1rem;
+    margin: .5rem .5rem;
+}
+.item-pr{
+    display: flex;
+    text-align: center;
+    width: 16rem;
+    justify-content: center;
+    background-color: #e77431;
+    padding: 1rem 0;
+}
+.price-t{
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    height: 3rem;
+    
+}
+.card{
+    width: 40rem;
+    height: 10rem;
+    background-color: #ffffff;
+    font-family: "IBM Plex Sans","Anek Devanagari";
+    display: grid;
+    grid-template-columns: 20rem 10rem auto;
+    grid-template-rows: 6rem 4rem;
+    margin: 1rem 1.5rem;
+}
+.divi-li{
+    background-color: #000000;
+    width: 90%;
+    height: 2px;
+    padding: 0 1rem;
+}
+
+.group-1{
+    display: flex;
+    flex-direction: column;
+    width:15rem;
+    grid-column: 1 / 2; 
+    grid-row: 1;
+}
+.img-card{
+    width: 10rem;
+    height: 10rem;
+    grid-column: 3 / 3; 
+    grid-row: span 2;
+    border-left: 1px solid #000000;
+}
+.container-list-it{
+    height: 9rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.cart-t, .cart-p{
+    font-size: 1.2rem;
+}
+.cart-t{
+    width: 18rem;
+    height: 4;
+    margin: 1rem 1rem;
+}
+.multi{
+    margin: .5rem .2rem 0;
+}
+[class^="card-p-"]{
+    margin:0 0 0 1rem;
+    width: 5rem;
+    height: 2rem;
+    display: flex;
+    padding: 0 .3rem;
+    align-items: center;
+    justify-content: center;
+    background-color: #f38a29;
+}
+.unid{
+    display: flex;
+    grid-column: 1 / 2; 
+    grid-row: 2;
+}
+.unidad{
+    border: 1px solid #000000;
+    display: flex;
+    padding: .3rem 0 0;
+    text-align: center;
+    justify-content: center;
+}
+.opt-cont{
+    height: 10rem;
+    width: auto;
+    grid-column: 2 / 2; 
+    grid-row: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.unidad{
+    width: 3rem;
+    text-align: center;
+    height: 1.6rem;
+    font-size: 1rem;
+    outline: none;
+}
+.add, .del{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:2rem;
+    height: 2rem;
+    font-size: 1.3rem;
+    color: #ffffff;
+    font-weight: 900;
+}
+.add2, .del2{
+    width: 8rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-weight: 800;
+    color: #ffffff;
+    margin: .5rem .5rem .5rem;
+}
+.img-del, .img-save{
+    width: 1rem;
+    height: 1rem;
+    margin: 0 .5rem 0;
+}
+.add, .add2{
+    background-color: #58f329;
+    border: 1px solid #4ccf24;
+}
+.del, .del2{
+    background-color: #f32929;
+    border: 1px solid #cf2424;
+}
+
+.pago{
+    background-color: #ff4747;
+    border-radius: 5px;
+    padding: .5rem 1rem;
+    border: 1px solid #b13131;
+    font-weight: bold;
+    font-family: "IBM Plex Sans","Anek Devanagari";
+    width: 80%;
+    height: 3rem;
+    font-size: 1rem;
+    margin: 0 0 .5rem;
+    cursor: pointer;
+    color: #000000;
+    text-decoration: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cart-list-i{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 150px
+}
+
+.cart-list-i-price{
+    text-align: end;
+    padding: .2rem 0;
+}
+.card-1-list{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: .5rem;
+}
+.group-itm-c{
+    width: 1.1rem;
+    
+}
+.group-itm-p{
+    width: 5rem;
+    padding: 0 .5rem;
+    display: flex;
+    align-items: start;
+}
+.text-noth{
+   font-size: 1.2rem;
+   font-weight: 700;
+   color: #ffffff;
+}
+.noting-cont{
+    margin-top: 5rem;
+    font-family: "IBM Plex Sans","Anek Devanagari";
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.img-nothing{
+    width: 5rem;
+    height: 5rem;
+    margin: 1rem 0;
+}
+.const-not-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.elm-noth-t{
+    font-weight: 800;
+    background-color: none;
+    margin: .5rem
+}
+.agregar{
+    background-color: #ffd447;
+    border-radius: 5px;
+    padding: .5rem 1rem;
+    border: 1px solid #a8b131;
+    font-weight: bold;
+    font-family: "IBM Plex Sans","Anek Devanagari";
+    width: 80%;
+    height: 3rem;
+    font-size: 1rem;
+    margin: 0 0 .5rem;
+    color: #000000;
+    text-decoration: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

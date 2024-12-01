@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@100..800&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+.menu-footer{
+    display: flex;
+}
+.ft-container{
+    position: absolute;
+    z-index: 8;
+    width: 100%;
+    background-color: #092767;
+    padding: 1px;
+    margin: 41.5rem 0 0;
+    color: #ffffff;
+    padding: 1rem 0;
+    display: flex;
+    align-items: center;
+}
+.imgsize{
+    width: 5rem;
+    height: 5rem;
+    margin: 0 1rem;
+}
+.options-1, .options-2{
+    margin: 0 1.5rem;
+}
+.elmt{
+    font-family: "IBM Plex Sans","Anek Devanagari";
+    padding: .2rem 0;
+}

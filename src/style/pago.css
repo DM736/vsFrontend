@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@100..800&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+.method-pa{
+    width: 25rem;
+    height: calc(100vh - 4rem);
+    background-color: #bbbbbb;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 4rem 0 0;
+}
+.form-pc{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 16rem;
+    margin: 1rem 0 0;
+    padding: .5rem 0 0;
+    font-family: "IBM Plex Sans","Anek Devanagari";
+    background-color: #ffffff;
+    height: 30rem;
+}
+.label-t{
+    text-align: center;
+    font-weight: 900;
+}
+.label-c, .label-c2, .label-cc2{
+    display: flex;
+    flex-direction: column;
+}
+.label-c{
+    margin: .6rem .4rem;
+}
+.label-cc{
+    display: flex;
+    flex-direction: row;
+}
+.label-cc, .label-cc2 .field-u2{
+    width: 6rem;
+}
+.label-cc2{
+    padding: 0 .6rem;
+}
+.field-title{
+    width: 6rem;
+}
+.field-u{
+    width: 13.7rem;
+}
+.field-pago{
+    width: 14rem;
+    border: 1px solid #6e6e6e;
+    height: 1.3rem;
+    border-radius: 2px ;
+    text-align: center;
+    background-color: #b8a53d;
+    color: #ffffff;
+    font-weight: 600;
+}
+.btn-pagar{
+    display: flex;
+    justify-content: center;
+}
+.pagar{
+    font-family: "Anek Devanagari", "IBM Plex Sans";
+    background-color: #1ab6ff;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 500;
+    width: 9rem;
+    padding: .3rem 1rem;
+    border: 1px solid #1284b9;
+    border-radius: 5px;
+    margin: 1rem 0 .4rem;
+    cursor: pointer;
+}
+.divi{
+    border-bottom: 1px solid #000000;
+    width: 15rem;
+    height: 1px;
+    margin: 1.5rem 0 0;
+}
+.more-opt{
+    display: flex;
+    justify-content: space-between;
+}
+
+/*----------------------direccion appr-----------------------*/
+.dir-form-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.dir-space{
+    display: none;
+    background-color: #000000b2;
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 50;
+}
+.closbtn{
+    background-color:transparent ;
+    border: none;
+    width: 2.5rem;
+    color: #ffffff;
+    font-weight: 300;
+    font-size: 2rem;
+    height: 2.5rem;
+    cursor: pointer;
+    align-items:start;
+}
+

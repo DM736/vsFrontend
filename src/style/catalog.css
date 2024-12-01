@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Devanagari:wght@100;200;300;400;500;600;700&display=swap');
+.t-img{
+    background-color: #fffefe;
+    display: flex;
+    flex-direction: row-reverse;
+    height: 14rem;
+}
+
+.img-ref{
+    width: 16rem;
+    height: 14rem;
+    margin-right: 4rem;
+}
+.search-results{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 90%;
+    justify-content: center;
+    height: 21rem;
+    margin: 0 .5rem 0 16.5rem ;
+}
+.i-container{
+    background-color: #f0f0f0;
+    height: 22rem;
+    width: 20rem;
+    border: 1px solid #00000069;
+    padding: .1rem;
+    margin: 1rem .5rem;
+    box-shadow: 2px 2px 3px 1px rgba(0, 0, 0, 0.2);
+}
+.e-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 4rem;
+}
+.line{
+    border-left: 1px solid #000000;
+    height: 3rem;
+}
+.container-pb{
+    width: 19.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.item-t{
+    padding: .5rem .3rem;
+    width: 95%;
+    height: 3rem;
+    overflow: auto;
+    scrollbar-width: none;
+    font-weight: 600;
+}
+.item-t::-webkit-scrollbar{
+    display: none;
+}
+.item-p{
+    font-weight: 900;
+    text-align: center;
+    margin: 0 0 .3rem;
+    font-size: 1.5rem;
+}
+.item-p-s{
+    text-decoration: line-through;
+    color: #7c7c7c;
+}
+.item-p, .item-p-s{
+    width: 5rem;
+}
+.container-btn, .container-price, .add-cart, .item-t{
+    display: flex;
+    font-family: "IBM Plex Sans Devanagari", Georgia, 'Times New Roman', Times, serif;
+}
+.container-price{
+    flex-direction: column;
+    text-align: center;
+    padding: 0 1rem;
+}
+.add-cart{
+    flex-direction:column ;
+    align-items: center;
+    justify-content: center;
+    background-color: #38e932;
+    border: 1px solid #249420;
+    margin: 0 .2rem 0;
+    padding: .2rem .5rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.selected-cart{
+    flex-direction:column ;
+    align-items: center;
+    justify-content: center;
+    background-color: #e9dd32;
+    border: 1px solid #e9dd32;
+    margin: 0 .5rem 0;
+    padding: .2rem .5rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.delete-cart{
+    flex-direction:column ;
+    align-items: center;
+    justify-content: center;
+    background-color: #e93232;
+    border: 1px solid #e93232;
+    margin: 0 .5rem 0;
+    padding: .2rem .5rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.more-optCart{
+    display: flex;
+    flex-direction: row;
+}
+.cart{
+    width: 2rem;
+    height: 2rem;
+}

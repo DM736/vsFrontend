@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@100..800&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+.dir-c{
+    display: flex;
+    align-items: center;
+    margin: .7rem 0 0;
+    height: calc(98vh);
+    background-color: #000000;
+    justify-content: center;
+}
+.form-str{
+    font-family: "IBM Plex Sans","Anek Devanagari";
+    width: 40rem;
+    height: 30rem;
+    margin: 3rem 0 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    justify-content: space-around;
+    align-items: center;
+}
+.form-titl{
+    margin: 1rem 4rem;
+}
+.dir-form{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: space-evenly;
+    border-radius: .4rem;
+}
+.direc-element-c{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 9rem;
+    height: 3.5rem;
+}
+.field-dir-c{
+    width: 10rem;
+}
+.field-dir-complt{
+    width: 20rem;
+    border: none;
+    border-bottom: 1px solid #000000;
+    background-color: transparent;
+    outline: none;
+}
+.all-dir{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #c7c7c7;
+    width: 100%;
+}
+.btn-submt{
+    background-color: #2295b8;
+    border: 1px solid #156179;
+    font-size: 1rem;
+    padding: .5rem 1rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+

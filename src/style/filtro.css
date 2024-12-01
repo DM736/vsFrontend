@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Moderustic:wght@300..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+.t-catalogo, .precio, .calificacion{
+    padding: .5rem;
+}
+.catalogo{
+    background-color: #ffffff;
+    width: 18rem;
+    height: 30rem;
+    margin: 1rem .5rem;
+    border: 1px solid #727272;
+    box-shadow: 10px 7px 9px -9px #000000c0;
+    border-radius: .5rem;
+    font-family: "Monserrat","Moderustic","Lato","Roboto", sans-serif, Arial, Helvetica, sans-serif;
+    overflow: auto;
+    position: fixed;
+}
+.catalogo::-webkit-scrollbar{
+    display: none;
+}
+.t-catalogo{
+    display: flex;
+    flex-direction: column;
+}
+.divisor-l{
+    border-bottom:1px solid #8a8a8a;
+    width: 8rem;
+    margin: .5rem 0;
+}
+.field-i-l{
+    display: flex;
+    flex-direction: row;
+}
+
+.text-f{
+    margin: 0 .5rem;
+}
+.limit-i{
+    width: 5rem;
+}
+.price-container{
+    display: flex;
+    flex-direction: column;
+    width: 15rem;
+}
+.price-limit{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 12rem;
+
+}
+.condition-e{
+    display: flex;
+    flex-direction: column;
+    padding: 0 .5rem;
+}
+.m-search{
+    width: 20px;
+    height: 20px;
+}
+.se-button{
+    background-color: #000000;
+    border: 1px solid #000000;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    width: 12rem;
+    height: 1.5rem;
+    margin: .5rem 0 0;
+}
+.limit{
+    justify-content: center;
+    margin:.5rem 1rem;
+    width: 10rem;
+}
+.item-h{
+    background-color: #d8d8d836;
+    box-shadow: 0 0 15px 5px #d1d1d1, 
+              0 0 15px 5px #d1d1d1 inset;
+    padding: 0 .5rem;   
+}
+.field-card{
+    margin: .2rem 0;
+    display: flex;
+    flex-direction: column;
+}
+.field-card-suv{
+    background-color: #053067;
+    color: #ffffff;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+}
+.items-sub-cont{
+    display: flex;
+    flex-direction: row;
+}
+/*----estilos por default de tipo filtro-----*/
+.field-card{
+    background-color: #053067;
+    color: #ffffff;
+    cursor: pointer;
+    padding: 1rem 0;
+    margin: .2rem 0;
+    display: flex;
+    flex-direction: column;
+}
+.f-card{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.box-de{
+    width: 1rem;
+    height: 1rem;
+    border-top: 1px solid #ffffff;
+    border-right: 1px solid #ffffff;
+    transform: rotate(45deg);
+    margin: 0 .5rem;
+}
+.more-option{
+    background-color: #ecf0f1;
+    width: 90%;
+    margin:0 .4rem 0;
+    max-height: 0;
+    overflow: hidden;
+    color: #000000;
+    transition: max-height 0.3s ease-out;
+}
+.option-cont{
+    display: flex;
+    justify-content: center;
+}
+.more-option, .more-option-Activ{
+    display: flex;
+    flex-direction: column;
+}
+/*----estilos ACTIVADOS por default de tipo filtro-----*/
+.field-card-suv-Activ{
+    background-color: #053067;
+    color: #ffffff;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    max-height: 4rem;
+    transition: max-height 0.3s ease-out
+}
+.f-card{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.box-de-Activ{
+    width: 1rem;
+    height: 1rem;
+    border-top: 1px solid #ffffff;
+    border-right: 1px solid #ffffff;
+    transform: rotate(-225deg);
+    margin: 0 .5rem;
+}
+.more-option{
+    margin:0 .4rem 0;
+    max-height: 0;
+    transition: max-height 0.3s ease-out;
+}
+.more-option-m{
+    margin:0 .4rem 0;
+    max-height: 0;
+    transition: max-height 0.3s ease-out;
+}
+.more-option-Activ{
+    max-height: 6rem;
+    margin:.6rem .4rem 0;
+    transition: max-height 0.3s ease-out;
+}
+.more-option-Activ-m{
+    max-height: 8rem;
+    margin:.6rem .4rem 0;
+    transition: max-height 0.3s ease-out;
+    overflow: hidden;
+}
+.more-option, .more-option-Activ, .more-option-Activ-m{
+    background-color: #ecf0f1;
+    width: 90%;
+    overflow: hidden;
+    color: #000000;
+}
+
