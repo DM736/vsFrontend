@@ -1,5 +1,5 @@
 # Node.js
-/virShop/node_modules
+/node_modules
 
 #variable
 .env
