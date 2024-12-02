@@ -21,6 +21,7 @@ const Navb = () => {
         setIsLoggedIn(false);
         setUserInfo(null)
     }else{
+        //obtencion del usuario por medio del token
         const getUser= async ()=>{
             try {
                 const response = await Invoke.invokePOST("/api/auth/val", tokn);

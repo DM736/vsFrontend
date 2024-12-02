@@ -5,7 +5,7 @@ import Invoke from "../../../config/Invoke";
 const Historial = () => {
     const [cita, setCita] = useState([]);
 
-    const getHist= async ()=>{
+    const getHistorial = async ()=>{
         const response = await Invoke.invokeGET("/api/historial");
         setCita(response);
     }
@@ -13,10 +13,10 @@ const Historial = () => {
         getHist();
     },[])
 
-    const delCitas = async (i, idc)=>{
+    const delHistorial = async (i, idc)=>{
         i.preventDefault();
         const resp =await Invoke.invokeDELETE(`/api/historial/${idc}`);
-        const msg="Se ha eliminado la cita medica";
+        const msg="Se ha eliminado el registro del historial";
         Alert(msg, "Informacion", "success","#198754");
         getCitas();
     }

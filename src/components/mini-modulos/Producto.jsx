@@ -13,10 +13,11 @@ const Producto = () => {
   useEffect(()=>{
     const getList =async()=>{
       try {
+        //obtencion de los productos de la cesta
         const tokn ={token: `${localStorage.getItem('token')}`}
         const resUser = await Invoke.invokePOST("/api/auth/val", tokn);
         const resProdLis = await Invoke.invokeGET(`/api/cesta/1/${resUser.usuario.id}`)
-        if(resProdLis.msg=="no hay registros todavia"){
+        if(resProdLis.msg=="no hay registros todavia"){//validacion de la existencia de los registros en el carrito
           return setUserListf("no hay registros todavia")
         }else{
           return setUserList(resProdLis);
@@ -27,12 +28,14 @@ const Producto = () => {
     }
     getList()
   },[])
+  //cantidad por defecto de un producto
   const [inputval, setInputval] = useState(
     userList.map(() => 1)
   );
   const handleInputChange = (event) => {
     setInputval(event.target.value);
   };
+   //actualizacion de la cesta
   const actuRegist = async(ide, user,proid,img, nombre, precio)=>{
     const data={
       id: ide,
@@ -54,9 +57,11 @@ const Producto = () => {
       console.log(error)
     }
   }
+  //formato de precio
   const formatoPrice =(num)=>{
     return new Intl.NumberFormat("es-CO").format(num)
   }
+  //funcion para eliminar un producto de la cesta
   const delProdc = async (i, idProd)=>{
     i.preventDefault();
     const tokn ={token: `${localStorage.getItem('token')}`}

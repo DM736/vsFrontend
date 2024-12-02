@@ -9,6 +9,7 @@ import "../../style/descripcion.css";
 const Cata = ({elementos}) => {
     const [moreOpt, setMoreOpt] = useState(null);
     const [moreOptid, setSelectedId] = useState([]);
+    //funcion para agregar productos y validar existencia
     const getElemnt = async(id)=>{
         try {
             const tokn ={token: `${localStorage.getItem('token')}`}
@@ -38,12 +39,15 @@ const Cata = ({elementos}) => {
             console.log(`hubo un error`)
         }
         }
+        //cambio de estado al agregar
         const Onclickid=(itemid)=>{
             setSelectedId(((prev) => [...prev, itemid]))
         }
+        //cambio de estado al eliminar
         const Ondelid=(itemid)=>{
             setSelectedId(((prev) => prev.filter(previ => previ !== itemid)))
         }
+        //funcion para remover desde la busqueda
     const delElemntCart=async(objid)=>{
         try {
             const tokn ={token: `${localStorage.getItem('token')}`}
@@ -55,6 +59,7 @@ const Cata = ({elementos}) => {
             console.log("hubo un error")
         }
     }
+    //funcion para validar usuario para agregar un producto
     const valToken = ()=>{
         const tokn = localStorage.getItem('token')
         if(!tokn){
@@ -62,6 +67,7 @@ const Cata = ({elementos}) => {
             Alert(msg, "Informacion", "warning", "#fcce03");
         }
     }
+    //formato de precio
     const formatoPrice =(num)=>{
         return new Intl.NumberFormat("es-CO").format(num)
       }

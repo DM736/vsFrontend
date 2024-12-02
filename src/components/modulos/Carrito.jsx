@@ -10,6 +10,7 @@ const Carrito=()=> {
   const [userList, setUserList] = useState([]);
   const [userListf, setUserListf] = useState("");
   useEffect(()=>{
+    //validacion de la existencia de los registros en el carrito desde la busqueda
     const getList =async()=>{
       try {
         const tokn ={token: `${localStorage.getItem('token')}`}
@@ -22,16 +23,19 @@ const Carrito=()=> {
         }
       } catch (error) {
         console.log(error)
+        Alert("Hubo un error", "Informacion", "error", "#fcce03")
       }
     }
     getList()
   },[])
+  //calculo del total segun la cantidad y precio de los productos
   const calculoSum = () => {
     return userList.reduce((acum, reg) => {
       return acum + reg.precio * reg.cantidad;
     }, 0); 
 
   };
+  //formato de suma
   const formatoPrice =(num)=>{
     return new Intl.NumberFormat("es-CO").format(num)
   }

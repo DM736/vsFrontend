@@ -6,13 +6,14 @@ import buscar from '../../assets/buscar1.svg'
 const Filtro = ({filtroCate, setFiltroCate, setprecioIni,setprecioFin}) => {
     const [isOpen, setIsOpen] = useState(false);
     const [isOpenMarca, setIsOpenMarca] = useState(false);
+    // estado del filtro
     const handleCheckboxChange = (e) => {
         const { name, checked } = e.target;
         setFiltroCate((prevFiltroCate) => ({...prevFiltroCate,
             [name]: checked,
         }));
       };
-    
+      // estado del despliegue de opciones
       let arr
       let mar
       isOpen? arr = "box-de-Activ" : arr = "box-de"
