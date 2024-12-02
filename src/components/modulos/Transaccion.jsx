@@ -10,10 +10,12 @@ function Transaccion() {
     const [userList, setUserList] = useState([]);
     const [userListf, setUserListf] = useState("");
     const naveg = useNavigate();
+    //estado de los datos para la transaccion
     const [transac, setTransac]=useState({
       nombre:"",apellido:"",cedula:"",fechaExp:"",
       clave:"",email:"",valorTotal:""
     })
+    //estado de los datos para la direccion
     const [selectValor, setSelectValor]=useState({
       lugar1:"",numero1:"",tipo1:"",numero2:"",
       tipo2:"",numero3:"",ubicacion:"",lugar2:""
@@ -26,6 +28,7 @@ function Transaccion() {
       });
     };
     useEffect(()=>{
+      //obtencion de los datos de la cesta
       const getList =async()=>{
         try {
           const tokn ={token: `${localStorage.getItem('token')}`}
@@ -42,6 +45,7 @@ function Transaccion() {
       }
       getList()
     },[])
+    //calculo del total precio * cantidad
     const calculoSum = () => {
       return userList.reduce((acum, reg) => {
         return acum + reg.precio * reg.cantidad;
@@ -51,11 +55,13 @@ function Transaccion() {
     const formatoPrice =(num)=>{
       return new Intl.NumberFormat("es-CO").format(num)
     }
+    //cierre de la pestaña de direccion
     const closeAll =()=>{
       const backg = document.querySelector(".dir-space");
       backg.style.display ="none";
     }
     const { nombre, apellido, cedula, fechaExp, clave,  email, valorTotal} = transac;
+    //proceso de validacion de los datos ingresados
   const process = async()=>{
     try {
       const tokn ={token: `${localStorage.getItem('token')}`}
@@ -68,6 +74,7 @@ function Transaccion() {
         valorTotal: calculoSum()
       }
       const transfr = await Invoke.invokePOST("/api/transacc/validar/", data)
+      //validacion segun la respuesta desde el backend
       if(transfr.message == "Los datos son validos"){
         const backg = document.querySelector(".dir-space");
         backg.style.display = "block";
@@ -79,6 +86,7 @@ function Transaccion() {
       console.log(error)
     }
   }
+  //proceso final de los datos de transaccion y direccion
   const finalProcess =async()=>{
     const tokn ={token: `${localStorage.getItem('token')}`}
       const user = await Invoke.invokePOST("/api/auth/val", tokn);
@@ -106,6 +114,7 @@ function Transaccion() {
       ...transac, [e.target.name]: e.target.value
     })
 }
+//obtencion de la direccion
 const getDirecc = ()=>{
   const direc = document.querySelector(".field-dir-complt").innerHTML
   return direc
