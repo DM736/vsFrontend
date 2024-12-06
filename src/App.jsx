@@ -1,5 +1,4 @@
-import React from 'react'
-import { Fragment } from 'react'
+import React,{ Fragment, useState } from 'react'
 import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom'
 import Home from './components/modulos/Home'
 import Login from './components/modulos/Login'
@@ -21,7 +20,7 @@ function App() {
           <BrowserRouter>
             <Routes>
             <Route path='/' exact element={<Navigate to="/login"/>}/>
-              <Route path='/home' exact element={<Home/>}/>
+              <Route path='/home' exact element={<Home />}/>
               <Route path='/login' exact element={<Login/>}/>
               <Route path='/registro' exact element={<Registro/>}/>
               <Route path="/buscar" exact element={<Search/>}/>

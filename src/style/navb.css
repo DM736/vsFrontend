@@ -19,6 +19,13 @@ body::-webkit-scrollbar {
     top: 0;
     z-index: 40;
 }
+.buton-lupa{
+    background-color: transparent;
+    padding: 0;
+    border: none;
+    border-left: 1px solid #8a8a8a;
+    cursor: pointer;
+}
 
 .option-container{
     display: flex;
@@ -45,8 +52,8 @@ body::-webkit-scrollbar {
     color: #000000;
 }
 .img-icon{
-    width: 25px;
-    height: 25px;
+    width: 24px;
+    height: 24px;
     margin: 0 1rem;
 }
 .img-icon-1{

@@ -1,4 +1,4 @@
-import {React, useState, useEffect} from 'react';
+import {React, useState, useEffect, useRef} from 'react';
 import {Link, useNavigate} from 'react-router-dom'
 import casa from "../../assets/icons/casa.svg"
 import inicio from "../../assets/icons/iniciar.svg"
@@ -10,12 +10,13 @@ import Invoke from "../../../config/Invoke";
 import '../../style/navb.css'
 import '../../style/reset.css'
 
-const Navb = () => {
+const Navb = ({setSearchWord}) => {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     const [userInfo, setUserInfo] = useState(null);
     const [showUserMenu, setShowUserMenu] = useState(false);
-    const tokn ={token: `${localStorage.getItem('token')}`}
+    const tokn ={token: `${localStorage.getItem('token')}`};
     const navg = useNavigate();
+    const inputRef = useRef(null)
    useEffect(()=>{
     if(!tokn) {
         setIsLoggedIn(false);
@@ -64,8 +65,10 @@ const Navb = () => {
                     <img src={logo}className='i-logo'/>
                 </div>
                 <div className="lupa">
-                    <input type="text"autoComplete='off'className='lupa-s'/>
-                    <img src={lupa}className='img-icon'></img>
+                    <input type="text" autoComplete='off' className='lupa-s' ref={inputRef} onChange={(e)=>setSearchWord(e.target.value)}/>
+                    <Link to={`/buscar?valor=${inputRef.current?.value || ''}`} className='buton-lupa'>
+                        <img src={lupa} className='img-icon'></img>
+                    </Link>
                 </div>
                 <div className='option-container'>
                     <div>

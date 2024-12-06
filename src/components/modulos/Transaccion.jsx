@@ -9,6 +9,7 @@ import Alert from '../../notify/Aviso';
 function Transaccion() {
     const [userList, setUserList] = useState([]);
     const [userListf, setUserListf] = useState("");
+    const [searchWord, setSearchWord] = useState("");
     const naveg = useNavigate();
     //estado de los datos para la transaccion
     const [transac, setTransac]=useState({
@@ -212,7 +213,8 @@ const getDirecc = ()=>{
         </form>
       </div>
     <div>
-        <Navb/>
+        <Navb
+        setSearchWord={setSearchWord}/>
     </div>
     <div className="global-c">
       <div className="product-c">
