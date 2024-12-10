@@ -6,8 +6,8 @@ import "../../style/producto.css"
 import Invoke from "../../../config/Invoke";
 import Alert from '../../notify/Aviso'
 
-
 const Producto = () => {
+  //estados de la lista
   const [userList, setUserList] = useState([]);
   const [userListf, setUserListf] = useState("");
   useEffect(()=>{

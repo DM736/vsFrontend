@@ -3,6 +3,7 @@ import "../../style/filtro.css";
 import "../../style/reset.css";
 import buscar from '../../assets/buscar1.svg'
 
+// prop de estado del filtro desde Search 
 const Filtro = ({filtroCate, setFiltroCate, setprecioIni,setprecioFin}) => {
     const [isOpen, setIsOpen] = useState(false);
     const [isOpenMarca, setIsOpenMarca] = useState(false);
@@ -24,6 +25,7 @@ const Filtro = ({filtroCate, setFiltroCate, setprecioIni,setprecioFin}) => {
     const activOptMarca = ()=>{
         setIsOpenMarca(!isOpenMarca);
     }
+    // estructura del filtro y funciones de eventos
     return (
         <div className='catalogo'>
             <div className='t-catalogo'>

@@ -1,6 +1,6 @@
 import React,{useEffect, useState} from 'react'
 import Navb from '../mini-modulos/Navbar'
-import {Link, useNavigate} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import "../../style/producto.css"
 import Producto from '../mini-modulos/Producto'
 import Invoke from "../../../config/Invoke";
@@ -17,6 +17,7 @@ const Carrito=()=> {
       try {
         const tokn ={token: `${localStorage.getItem('token')}`}
         const resUser = await Invoke.invokePOST("/api/auth/val", tokn);
+        //validacion de la existencia de los registros en el carrito de usuario 
         const resProdLis = await Invoke.invokeGET(`/api/cesta/1/${resUser.usuario.id}`)
         if(resProdLis.msg=="no hay registros todavia"){
           return setUserListf("no hay registros todavia")
@@ -41,6 +42,7 @@ const Carrito=()=> {
   const formatoPrice =(num)=>{
     return new Intl.NumberFormat("es-CO").format(num)
   }
+  //formato de la cesta de compras
   return (
     <section>
       <div>

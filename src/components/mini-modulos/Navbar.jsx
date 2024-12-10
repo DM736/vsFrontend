@@ -11,18 +11,21 @@ import '../../style/navb.css'
 import '../../style/reset.css'
 
 const Navb = ({setSearchWord}) => {
+    //estado del input, inicio de sesion, informacion de usuario y menu de usuario
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     const [userInfo, setUserInfo] = useState(null);
     const [showUserMenu, setShowUserMenu] = useState(false);
     const tokn ={token: `${localStorage.getItem('token')}`};
     const navg = useNavigate();
+    //referencia inicial del contenido del input
     const inputRef = useRef(null)
    useEffect(()=>{
+    //validacion de la existencia del token
     if(!tokn) {
         setIsLoggedIn(false);
         setUserInfo(null)
     }else{
-        //obtencion del usuario por medio del token
+        //obtencion del usuario y validacion por medio del token
         const getUser= async ()=>{
             try {
                 const response = await Invoke.invokePOST("/api/auth/val", tokn);
@@ -41,23 +44,28 @@ const Navb = ({setSearchWord}) => {
         getUser()
     }
    },[]);
+   //cierre de sesion
    const logout = () => {
     localStorage.removeItem('token');
     setIsLoggedIn(false);
     setUserInfo(null);
     navg('/home'); // Redirige a la página de inicio de sesión
   };
+  //informacion de usuario al haber cambio
     const showUser =()=>{
         setShowUserMenu(prevState => !prevState);
     }
+    //despliegue de la informacion de usuario al haber cambio
     const openInfo = ()=>{
         const backg = document.querySelector(".bloq");
         backg.style.display = "block";
     }
+    //cierre de la informacion de usuario al haber cambio
     const closeAll =()=>{
         const backg = document.querySelector(".bloq");
         backg.style.display ="none";
     }
+    //retorno de la estructura y eventos segun el click
     return (
         <div>
             <div className='container'>
@@ -112,12 +120,14 @@ const Navb = ({setSearchWord}) => {
                                 <p className='user-name'>{userInfo.usuario.nombre}</p>
                                 <p className='user-email'>{userInfo.usuario.email}</p> 
                                 <button className='btn-close' onClick={logout}>Cerrar Sesion</button>
+                                <Link to={'/historial-compras'} className='btn-histo'>Historial</Link>
                             </div>
                         ) : (
                             <div className='menu-user'>
                             <p className='Info-r'>Registrate o inicia sesion para continuar</p>
                             <Link to={'/login'} className='btn-inic'>Iniciar sesión</Link>
                             <Link to={'/registro'} className='btn-regist'>Registrarse</Link>
+                            
                             </div>
                         )}
                         </div>

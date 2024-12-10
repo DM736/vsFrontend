@@ -8,6 +8,7 @@ import { Link} from "react-router-dom";
 import Invoke from "../../../config/Invoke";
 import Alert from '../../notify/Aviso';
 const Registro = () => {
+  //estado inicial del registro
   const [user, setUser]= useState({
     nombre:"",
     email:"",
@@ -15,6 +16,7 @@ const Registro = () => {
     password2:""
   });
   const { nombre, email, password, password2} = user;
+  //funcion para registrar los cambios en los datos del formulario
   const atChange =(e)=>{
     setUser({
       ...user, [e.target.name]: e.target.value
@@ -23,6 +25,7 @@ const Registro = () => {
   useEffect(() => {
     document.querySelector("#nombre").focus();
   }, []);
+  //funcion para registro de usuario
   const RegistroUser = async ()=> {
     if (password !== password2) {
         const msg = "Las contraseñas son diferentes"
@@ -36,6 +39,7 @@ const Registro = () => {
           email: user.email,
           password: user.password
         }
+        //metodo post de los datos de registro
         const response = await Invoke.invokePOST('/api/usuario', data);
         const mensaje = response.msg
         if (mensaje === 'El usuario ya existe') {
@@ -54,10 +58,12 @@ const Registro = () => {
         }
     }
   }
+  //registro de usuario al enviar los datos
   const atSubmit =(e) =>{
     e.preventDefault();
     RegistroUser();
   }
+  //estrutura del registro de informacion
   return (
     <section className='registro-c'>
         <div className='back-all-container-r'>

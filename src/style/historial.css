@@ -2,8 +2,8 @@
 .hist-list{
     display: flex;
     justify-content: center;
-    height: 100vh;
-    margin: 0 0 0 20%;
+    width: calc(100% - 14rem);
+    margin: 4.7rem 0 0 0;
 }
 .elmnt-hist{
     background-color: #ffffff;
@@ -29,17 +29,17 @@
 .panel-h-cont{
     display: flex;
     flex-direction: row;
+
 }
 .panel-optn{
-    margin: 5rem .3rem 0 0;
+    display: flex;
+    flex-direction: column;
+    margin: 4.7rem 0 0 0;
+    width: 14rem;
     background-color: #0f3fa7;
     font-family: "IBM Plex Sans","Anek Devanagari";
     color: #ffffff;
-    width: 15rem;
-    position: absolute;
     z-index: 3;
-    height: calc(100vh - 7rem);
-    padding: 1rem .5rem;
 }
 .option-h{
     padding: .5rem 1rem;
@@ -50,24 +50,23 @@
     background-color: #092767;
 }
 .histor-cont{
-    margin: 5rem 0 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 90vh;
-    height: calc(100vh - 5rem);
+    align-items: center;
+    width: 100%;
+    height: calc(100vh - 4.7rem);
     background-color: #858585;
-    overflow: auto;
-    scrollbar-width: none;
 }
-.histor-cont::-webkit-scrollbar{
+.cont-list-h::-webkit-scrollbar{
     display: none;
 }
 .cont-list-h{
-    padding: 6rem 0;
-    height:90% ;
     display: flex;
     flex-direction: column;
+    height: 30rem;
+    overflow: auto;
+    scrollbar-width: none;
 }
 .head-hist{
     width: 30rem;

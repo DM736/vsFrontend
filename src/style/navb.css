@@ -153,7 +153,7 @@ body::-webkit-scrollbar {
     font-weight: 600;
     margin: 3rem 0;
 }
-.btn-inic, .btn-regist, .btn-close{
+.btn-inic, .btn-regist, .btn-close, .btn-histo{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -175,6 +175,11 @@ body::-webkit-scrollbar {
 }
 .btn-regist{
     background-color: #0d7dd8;
+    color: #ffffff;
+    transition: .3s;
+}
+.btn-histo{
+    background-color: #d8980d;
     color: #ffffff;
     transition: .3s;
 }

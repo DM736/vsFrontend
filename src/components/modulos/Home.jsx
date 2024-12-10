@@ -7,6 +7,7 @@ import CardsType from '../mini-modulos/CardsType';
 
 
 const Home = () => {
+     //estado del input de la busqueda
      const [searchWord, setSearchWord] = useState("");
 return (
      <section className='home-c'>

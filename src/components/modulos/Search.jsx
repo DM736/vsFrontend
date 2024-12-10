@@ -44,6 +44,7 @@ const Search = () => {
       )
     }else{
     return (
+      (elemento.nombreProducto.toLowerCase().includes(searchWord.toLowerCase()))&&
         ((filtroCate.Tecnologia && elemento.categoria === 'Tecnologia') || 
         (filtroCate.Electrodomestico && elemento.categoria === 'Electrodomestico') || 
         (filtroCate.Accesorios && elemento.categoria === 'Accesorios') || 

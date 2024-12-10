@@ -9,11 +9,13 @@ import Invoke from "../../../config/Invoke";
 import Alert from '../../notify/Aviso';
 const Login = () => {
   const navg = useNavigate();
+  //estado iniciar de los datos para iniciar sesion
   const [user, setUser]= useState({
     email:"",
     password:""
   });
   const { email, password} = user;
+  //cambio de estado de los datos de usuario al hacer click
   const atChange =(e)=>{
     setUser({
       ...user, [e.target.name]: e.target.value
@@ -22,6 +24,7 @@ const Login = () => {
   useEffect(() => {
     document.querySelector("#email").focus();
   }, []);
+  //funcion para ejecutar el inicio de sesion y autenticacion
   const InicioSes = async ()=> {
     if(password.length<10){
         const msg = "La contraseña debe tener minimo 10 caracteres"
@@ -49,10 +52,12 @@ const Login = () => {
       }
     }
   }
+  //funcion para ejecutar el logeo y atenticacion al enviar
   const atSubmit =(e) =>{
     e.preventDefault();
     InicioSes();
   }
+  //estrutura del componente de inicio de sesion
   return (
     <section className='registro-c'>
       <div className='bg-container'>

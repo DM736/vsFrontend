@@ -7,11 +7,13 @@ import "../../style/catalog.css";
 import "../../style/descripcion.css";
 
 const Cata = ({elementos}) => {
+    //estados del boton de agregar haber hecho clic
     const [moreOpt, setMoreOpt] = useState(null);
     const [moreOptid, setSelectedId] = useState([]);
     //funcion para agregar productos y validar existencia
     const getElemnt = async(id)=>{
         try {
+            //validacion del token y la existencia del producto en la cesta
             const tokn ={token: `${localStorage.getItem('token')}`}
             const resUser = await Invoke.invokePOST("/api/auth/val", tokn);
             const resProd = await Invoke.invokeGET(`/api/productos/${id}`);
@@ -19,12 +21,14 @@ const Cata = ({elementos}) => {
                 const msg = "Para agregar este producto debe iniciar sesion"
                 Alert(msg, "Informacion", "warning", "#fcce03");
             }
+            //manejo de la informacion del producto
             const data ={user: resUser.usuario.id, 
                 productoid: resProd.id, 
                 imgProducto: resProd.imgData, 
                 nombreProd: resProd.nombreProducto, 
                 precio: resProd.precio,
                 cantidad: 1}
+                //validacion de la existencia de un producto
             const verify = await Invoke.invokeGET(`/api/cesta/2/${resUser.usuario.id}/${resProd.id}`);
             const mssg = `Ya se habia agrego ${resProd.nombreProducto}`
             const mssge = `Producto agregado: ${resProd.nombreProducto}`
@@ -71,6 +75,7 @@ const Cata = ({elementos}) => {
     const formatoPrice =(num)=>{
         return new Intl.NumberFormat("es-CO").format(num)
       }
+      //formato de precio
     return (
         <div className='search-results'>
            {elementos.map((elem, index)=>(

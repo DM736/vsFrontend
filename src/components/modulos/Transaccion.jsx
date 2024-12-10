@@ -91,6 +91,7 @@ function Transaccion() {
   const finalProcess =async()=>{
     const tokn ={token: `${localStorage.getItem('token')}`}
       const user = await Invoke.invokePOST("/api/auth/val", tokn);
+      //manejo de la informacion para la transaccion
       const data = {
         nombre: transac.nombre,
         apellido: transac.apellido,
@@ -102,6 +103,7 @@ function Transaccion() {
         direcc: getDirecc(),
         valorTotal: calculoSum()
       }
+      //proceso de compra final
       const transff = await Invoke.invokePOST("/api/transacc/", data)
       if(transff.message !="Se proceso la transaccion"){
         Alert(transff.message, "Informacion", "error", "#DC3545");
@@ -110,6 +112,7 @@ function Transaccion() {
         naveg("/home")
       }
   }
+  //funcion para el cambio de estado en el formulario de direccion
   const atChange = (e) => {
     setTransac({
       ...transac, [e.target.name]: e.target.value
