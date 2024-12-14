@@ -1,5 +1,6 @@
 import {React, useState, useEffect, useRef} from 'react';
 import {Link, useNavigate} from 'react-router-dom'
+import Notificacion from '../modulos/Notificacion';
 import casa from "../../assets/icons/casa.svg"
 import inicio from "../../assets/icons/iniciar.svg"
 import camp from "../../assets/icons/camp.svg"
@@ -9,6 +10,7 @@ import carrito from "../../assets/icons/carritonv1.png"
 import Invoke from "../../../config/Invoke";
 import '../../style/navb.css'
 import '../../style/reset.css'
+import "../../style/notifi.css"
 
 const Navb = ({setSearchWord}) => {
     //estado del input, inicio de sesion, informacion de usuario y menu de usuario
@@ -65,9 +67,29 @@ const Navb = ({setSearchWord}) => {
         const backg = document.querySelector(".bloq");
         backg.style.display ="none";
     }
+    const closeAllNoti =()=>{
+        const backg = document.querySelector(".dir-space");
+        backg.style.display ="none";
+      }
+    const opnNotify =()=>{
+        const backg = document.querySelector(".dir-space");
+        backg.style.display = "block";
+    }
     //retorno de la estructura y eventos segun el click
     return (
         <div>
+            <div className="dir-space">
+                <div className='clos-btn-cont'>
+                    <button className="closbtn" onClick={()=>{
+                        closeAllNoti();
+                    }}>X</button>
+                </div>
+                <div className='notify-conten-lis'>
+                    <div className='notify-sub-cont'>
+                        <Notificacion/>
+                    </div>
+                </div>
+            </div>
             <div className='container'>
                 <div className='logo'>
                     <img src={logo}className='i-logo'/>
@@ -85,7 +107,7 @@ const Navb = ({setSearchWord}) => {
                         </a>
                     </div>
                     <div>
-                        <a href='/notificaciones' className='link-n'>
+                        <a href='#' className='link-n' onClick={opnNotify}>
                         <img src={camp}className='img-icon'></img>
                         </a>
                     </div>

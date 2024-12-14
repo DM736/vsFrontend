@@ -35,7 +35,7 @@ const Login = () => {
           password: user.password
       }
       //exito #198754 error #DC3545
-      const response = await Invoke.invokePOST('/api/auth', data);
+      const response = await Invoke.invokePOST('/api/auth/', data);
       const mensaje = response.msg;
       if(mensaje === "El usuario no existe" || mensaje === "Contraseña incorrecta"){
           const msg ="No es posible iniciar sesion, porfavor validar sesion";

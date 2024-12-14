@@ -13,7 +13,6 @@ const Historial = () => {
             const resUser = await Invoke.invokePOST("/api/auth/val", tokn);
             const resTransacc = await Invoke.invokeGET(`/api/transacc/registro/${resUser.usuario.id}`);
             setHistori(resTransacc);
-            console.log(resTransacc);
         }
         getHistorial();
     },[])

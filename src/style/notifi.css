@@ -11,9 +11,10 @@
     display: flex;
     justify-content: center;
 }
-.notifi-e{
+.notifi-e, .notifi-elem-cont{
     font-family: "IBM Plex Sans","Anek Devanagari";
     background-color: #ffffff;
+    padding: .5rem 0 0 0;
     width: 80%;
     height: 10rem;
     margin: 1rem 0 0;
@@ -91,4 +92,20 @@
 }
 .not-more:hover{
     background-color: #f1f1f1;
+}
+.noti-list-cont{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.img-user-off{
+    width: 3rem;
+    height: 3rem;
+}
+.notifi-elem-cont{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
